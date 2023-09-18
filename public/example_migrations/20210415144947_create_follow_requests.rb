@@ -1,4 +1,4 @@
-class CreateFollowRequests < ActiveRecord::Migration[6.1]
+class CreateFollowRequests < ActiveRecord::Migration[7.0]
   def change
     create_table :follow_requests do |t|
       t.belongs_to :recipient, null: false, foreign_key: { to_table: :users }, index: true
