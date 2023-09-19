@@ -22,8 +22,8 @@ describe "The home page" do
   it "has a sign out link with a DELETE request for the signed in user", points: 1 do
     visit "/"
 
-    expect(page).to have_selector("a[href='/users/sign_out'][data-method='delete']", text: "Sign out"),
-      "Expected home page to have 'Sign out' link with the proper data-method='delete' if the user is signed in."
+    expect(page).to have_selector("a[href='/users/sign_out'][data-turbo-method='delete']", text: "Sign out"),
+      "Expected home page to have 'Sign out' link with the proper data-turbo-method='delete' if the user is signed in."
   end
 
   it "does not have a sign in link if the user is already signed in", points: 1 do
