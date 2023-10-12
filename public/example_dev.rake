@@ -22,6 +22,7 @@ task example_sample_data: :environment do
 
   users.each do |first_user|
     users.each do |second_user|
+      next if first_user == second_user
       if rand < 0.75
         first_user.sent_follow_requests.create(
           recipient: second_user,
