@@ -62,8 +62,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_14_204229) do
     t.datetime "remember_created_at"
     t.citext "username"
     t.boolean "private", default: true
-    t.integer "likes_count"
-    t.integer "comments_count"
+    t.integer "likes_count", default: 0
+    t.integer "comments_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "photos_count"
