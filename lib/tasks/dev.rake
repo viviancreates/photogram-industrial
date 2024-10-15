@@ -22,7 +22,7 @@ task({ :sample_data => :environment }) do
 
   p "#{User.count} users have been created."
 
-  users.User.all
+  users = User.all
 
   users.each do |first_user|
     users.each do |second_user|
@@ -41,4 +41,5 @@ task({ :sample_data => :environment }) do
       end
     end
   end
+   p "There are now #{FollowRequest.count} follow requests."
 end
