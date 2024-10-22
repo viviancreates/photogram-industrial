@@ -11,7 +11,7 @@
     </h1>
 
     <ul class="nav nav-pills nav-justified">
-       <li class="nav-item">
+      <li class="nav-item">
         <%= link_to "Posts", user_path(@user.username), class: "nav-link" %>
       </li>
       <li class="nav-item">
@@ -31,7 +31,6 @@
 </div>
 
 <% @user.own_photos.each do |photo| %>
- <%= render "photos/photo", photo: photo %>
+  <%= render "photos/photo", photo: photo %>
 
-        
 <% end %>
